@@ -515,42 +515,45 @@ footer {
             }
         }
 
-        // Function to open payment link
-        function openPaymentLink(url) {
-            window.open(url, '_blank');
-        }
+// Function to open payment link
+function openPaymentLink(url, fallbackUrl) {
+    window.location.href = url;
+    setTimeout(() => {
+        window.location.href = fallbackUrl;
+    }, 500); // fallback to web URL if app is not installed
+}
 
-        document.getElementById('bit-payment').addEventListener('click', async (e) => {
-            const form = document.getElementById('registration-form');
-            const email = form['email'].value;
-            const firstName = form['first-name'].value;
-            const lastName = form['last-name'].value;
-            const phone = form['phone'].value;
+document.getElementById('bit-payment').addEventListener('click', async (e) => {
+    const form = document.getElementById('registration-form');
+    const email = form['email'].value;
+    const firstName = form['first-name'].value;
+    const lastName = form['last-name'].value;
+    const phone = form['phone'].value;
 
-            try {
-                await addToSendGridList(email, firstName, lastName, phone);
-                openPaymentLink('https://www.bitpay.co.il/app/share-info?i=170770424842_19hUeiRH');
-                alert('נרשמת בהצלחה! כעת תועבר לתשלום ב-Bit.');
-            } catch (error) {
-                alert('הרשמה נכשלה, נסה שוב.');
-            }
-        });
+    try {
+        await addToSendGridList(email, firstName, lastName, phone);
+        openPaymentLink('bit://bitpay.co.il/app/share-info?i=170770424842_19hUeiRH', 'https://www.bitpay.co.il/app/share-info?i=170770424842_19hUeiRH');
+        alert('נרשמת בהצלחה! כעת תועבר לתשלום ב-Bit.');
+    } catch (error) {
+        alert('הרשמה נכשלה, נסה שוב.');
+    }
+});
 
-        document.getElementById('paybox-payment').addEventListener('click', async (e) => {
-            const form = document.getElementById('registration-form');
-            const email = form['email'].value;
-            const firstName = form['first-name'].value;
-            const lastName = form['last-name'].value;
-            const phone = form['phone'].value;
+document.getElementById('paybox-payment').addEventListener('click', async (e) => {
+    const form = document.getElementById('registration-form');
+    const email = form['email'].value;
+    const firstName = form['first-name'].value;
+    const lastName = form['last-name'].value;
+    const phone = form['phone'].value;
 
-            try {
-                await addToSendGridList(email, firstName, lastName, phone);
-                openPaymentLink('https://payboxapp.page.link/EA8Nx6MFLZJyX1mTA');
-                alert('נרשמת בהצלחה! כעת תועבר לתשלום ב-PayBox.');
-            } catch (error) {
-                alert('הרשמה נכשלה, נסה שוב.');
-            }
-        });
+    try {
+        await addToSendGridList(email, firstName, lastName, phone);
+        openPaymentLink('paybox://payboxapp.page.link/EA8Nx6MFLZJyX1mTA', 'https://payboxapp.page.link/EA8Nx6MFLZJyX1mTA');
+        alert('נרשמת בהצלחה! כעת תועבר לתשלום ב-PayBox.');
+    } catch (error) {
+        alert('הרשמה נכשלה, נסה שוב.');
+    }
+});
 
 // FAQ Accordion
 const acc = document.getElementsByClassName("accordion");
