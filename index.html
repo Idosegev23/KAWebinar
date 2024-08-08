@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>גלה את עולם הבינה המלאכותית</title>
+    <meta name="description" content="הצטרפו לוובינר מרתק על בינה מלאכותית עם מומחי AI שרון איפראימוב ועמיר גז. למדו על ChatGPT, DALL·E, ועוד כלים מתקדמים.">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+        :root {
+            --primary-color: #eabd29;
+            --secondary-color: #444444;
+            --text-color: #333;
+            --bg-color: #f8f8f8;
+        }
+        body {
+            font-family: 'Heebo', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-color) 100%);
+            color: var(--primary-color);
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .logo {
+            width: 250px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+        .cta-button {
+            background: var(--primary-color);
+            color: #000;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            display: inline-block;
+            margin: 20px 0;
+            text-decoration: none;
+            max-width: 100%;
+            text-align: center;
+        }
+        .cta-button:hover, .cta-button:focus {
+            background: #ede2c0;
+            transform: translateY(-3px);
+        }
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            padding: 30px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .icon-list {
+            list-style: none;
+            padding: 0;
+        }
+        .icon-list li {
+            margin: 15px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        .icon-list li::before {
+            content: '🔹';
+            margin-left: 10px;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .reviews, .faq {
+            background: var(--secondary-color);
+            color: #fff;
+            padding: 50px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        .review {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .review span {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        footer {
+            background: #2a2a2a;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .popup button {
+            display: block;
+            margin: 10px auto;
+            background: #eabd29;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 80%;
+        }
+        .popup button:hover {
+            background: #ede2c0;
+        }
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #countdown {
+            font-size: 2rem;
+            font-weight: light;
+            margin: 20px 0;
+            color: var(--primary-color);
+        }
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: right;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+        .active, .accordion:hover {
+            background-color: #7c7c7c;
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: rgb(188, 188, 188);
+            display: none;
+            overflow: hidden;
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+            header {
+                padding: 30px 10px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            h3 {
+                font-size: 1.2rem;
+            }
+            .cta-button {
+                width: 100%;
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+            .card {
+                padding: 20px;
+            }
+            #countdown {
+                font-size: 1.5rem;
+            }
+            .popup-content {
+                padding: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            h3 {
+                font-size: 1.1rem;
+            }
+            .cta-button {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+            #countdown {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://kaitools.netlify.app/static/media/logo11.84e8ea8b48e8a76ad9ef.png" alt="לוגו" class="logo">
+        <h1>הכרת עולם הבינה המלאכותית עם KA</h1>
+        <h2>וובינר מרתק עם מומחי AI שרון איפראימוב ועמיר גז</h2>
+        <a href="#register" class="cta-button" aria-label="הרשמה לוובינר">הצטרפו עכשיו</a>
+        <div id="countdown" aria-label="ספירה לאחור לתחילת הוובינר"></div>
+    </header>
+
+  <main class="container">
+        <section class="card" aria-labelledby="about-company">
+            <h2 id="about-company">על החברה שלנו</h2>
+            <p><strong>KA: הכוח של ידע ושאפתנות</strong></p>
+            <p>ב-KA, אנו מאמינים בכוחם של Knowledge & Ambition – ידע ושאפתנות. באמצעות שילוב של טכנולוגיות מתקדמות ופתרונות מותאמים אישית, אנו מביאים אתכם להצלחה ויוצרים חוויות לקוח בלתי נשכחות שמניעות את העסק שלכם קדימה.</p>
+            <p>החברה שלנו בנויה משתי חטיבות עיקריות: CX (חווית לקוח) ו-AI (בינה מלאכותית). בראש החברה עומדת כוכבית ארנון, מייסדת ומנכ"לית, מרצה בכירה בארגונים ובאקדמיה על בינה מלאכותית וחווית לקוח כמנוע צמיחה בארגונים, עם ניסיון של כשני עשורים כסמנכ"לית בכירה בהראל ביטוח ופיננסים. עידו שגב, מנכ"ל חטיבת ה-AI, בעברו מנהל בכיר בארגונים המובילים בארץ, כיום מוביל את פעילות הבינה המלאכותית ב-KA ובחברת Triroars.</p>
+            <p>הצטרפו אלינו לוובינר מיוחד שמוקדש כולו לבינה מלאכותית!</p>
+            <p>אל תפספסו את ההזדמנות ללמוד ולהתפתח עם KA, החברה שמובילה אתכם להצלחה באמצעות ידע ושאפתנות.</p>
+            <p><strong>KA - Knowledge & Ambition</strong></p>
+        </section>
+        
+        <section class="card" aria-labelledby="instructors">
+            <h2 id="instructors">המדריכים שלנו</h2>
+            <div>
+                <h3>שרון איפראימוב</h3>
+                <p>מומחה לבינה מלאכותית עם ניסיון עשיר בתחום. שרון מתמחה בפיתוח והטמעת מערכות AI בארגונים. ידוע ביכולת להפוך את המורכב לפשוט וברור ולהדריך בצורה מרתקת ומעשירה.</p>
+            </div>
+            <div>
+                <h3>עמיר גז</h3>
+                <p>עמיר גז, בן 40 מהרצליה ואבא לשתי בנות, עם ניסיון של 20 שנה בהיי-טק. מומחה בפיתוח אתרים ואפליקציות בענן, ניהול תשתיות ענן ו-DevOps ב-AWS, והובלת צוותי פיתוח.</p>
+            </div>
+        </section>
+
+        <section class="card" aria-labelledby="webinar-content">
+            <h2 id="webinar-content">על מה יהיה הוובינר</h2>
+            <ul class="icon-list">
+                <li>שלוט ב-ChatGPT ליצירת תוכן ופתרון בעיות - כולל דוגמאות לשימוש במערכת לכתיבת מאמרים, יצירת סיכומים, ושיפור התקשורת עם לקוחות.</li>
+                <li>שחררו את הפוטנציאל של Claude לניתוח טקסט מתקדם - איך להשתמש ב-Claude לניתוח טקסטים מורכבים והפקת תובנות, כולל דוגמאות מעשיות.</li>
+                <li>יצירת תמונות מדהימות עם DALL·E ו-Ideogram - מדריך מעשי ליצירת תמונות ואיורים מותאמים אישית לכל צורך, כולל יצירת חומרי שיווק מרשימים.</li>
+                <li>שדרגו את המצגות שלכם עם gamma.app - איך ליצור מצגות מרהיבות וחדשניות בקלות, כולל טיפים לשיפור האפקטיביות והמקצועיות של המצגות שלך.</li>
+                <li>שימוש בכלי AI לשיפור האפקטיביות העסקית - כולל דוגמאות ליישום כלים כמו GPT-4 ו-Claude בתהליכי קבלת החלטות ובניתוח נתונים.</li>
+                <li>הבנת העקרונות המנחים של AI ואתיקה - איך להשתמש בבינה מלאכותית באופן אחראי ומוסרי, כולל ניהול סיכונים והבטחת פרטיות.</li>
+                <li>כלים ותוכנות מובילות בשוק - הכרות עם הכלים והתוכנות המובילות בתחום הבינה המלאכותית, והבנת היתרונות והחסרונות של כל כלי.</li>
+                <li>תקשורת והדרכה - טיפים לשימוש ב-AI ככלי להדרכה ולתקשורת עם צוותים ולקוחות, כולל יצירת צ'אטבוטים ומערכות תמיכה אוטומטיות.</li>
+            </ul>
+        </section>
+
+        <section class="card" aria-labelledby="benefits">
+            <h2 id="benefits">למה אסור לך להחמיץ את זה</h2>
+            <ul class="icon-list">
+                <li>רכישת מיומנויות מעשיות ליישום מיידי - תלמדו איך ליישם את הידע החדש בעבודה היומיומית שלכם.</li>
+                <li>הצצה לעתיד העבודה והיצירתיות - גלו איך AI משנה את העולם ואת ההזדמנויות הקריירה העתידיות שלך.</li>
+                <li>תבלטו בתחום שלכם עם ידע חדשני - איך להשתמש ב-AI כדי להפוך למוביל/ה בתחום שלך.</li>
+                <li>קבלו השראה לרעיונות חדשניים - דוגמאות לפרויקטים יצירתיים שיכולים לשנות את הדרך בה אתם עובדים.</li>
+                <li>רשת קשרים והזדמנויות חדשות - תפגשו אנשים נוספים המתעניינים בבינה מלאכותית.</li>
+                <li>כלים מעשיים ויישומיים - קבלו גישה לכלים ולמשאבים מעשיים שיסייעו לכם ליישם את מה שלמדתם.</li>
+<li>טכנולוגיה ותעשייה - הכרות עם החידושים והטרנדים העדכניים ביותר בתחום הבינה המלאכותית.</li>
+            </ul>
+        </section>
+
+        <section class="reviews" aria-labelledby="user-reviews">
+            <h2 id="user-reviews">חוות דעת משתמשים</h2>
+            <div class="review">
+                <p>"הוובינר היה מדהים! למדתי כל כך הרבה ואני כבר משתמש בידע החדש בעבודה שלי." <span>- אבי לוי</span></p>
+            </div>
+            <div class="review">
+                <p>"מדריכים מקצועיים והסברים ברורים. אני ממליצה בחום!" <span>- מיכל כהן</span></p>
+            </div>
+            <div class="review">
+                <p>"לא ידעתי עד כמה AI יכול לשנות את הדרך בה אני עובד. הוובינר הזה פתח לי עיניים." <span>- דני רוזן</span></p>
+            </div>
+        </section>
+
+        <section class="faq" aria-labelledby="faq-section">
+            <h2 id="faq-section">שאלות נפוצות</h2>
+            <button class="accordion">מה עלות ההשתתפות בוובינר?</button>
+            <div class="panel">
+                <p>עלות ההשתתפות בוובינר היא 100 ₪ בלבד. ניתן לשלם באמצעות  BIT או PAYBOX</p>
+            </div>
+
+            <button class="accordion">איך ניתן להירשם?</button>
+            <div class="panel">
+                <p>ניתן להירשם דרך כפתור ההרשמה הממוקם בראש הדף.</p>
+            </div>
+
+            <button class="accordion">מה נלמד בוובינר?</button>
+            <div class="panel">
+                <p>נלמד להשתמש בכלים מתקדמים של AI כמו ChatGPT, DALL·E ועוד. לפירוט מלא, ראו את הסעיף "על מה יהיה הוובינר" בדף זה.</p>
+            </div>
+
+            <button class="accordion">מי הם המדריכים?</button>
+            <div class="panel">
+                <p>המדריכים שלנו הם שרון איפראימוב ועמיר גז, מומחים בעלי ניסיון עשיר בעולמות הבינה המלאכותית והטכנולוגיה.</p>
+            </div>
+
+            <button class="accordion">מה משך הוובינר?</button>
+            <div class="panel">
+                <p>משך הוובינר הוא כשעה וחצי.</p>
+            </div>
+        </section>
+
+        <a href="#register" class="cta-button" aria-label="הרשמה לוובינר">הירשמו עכשיו לוובינר</a>
+       </main>
+
+    <footer>
+        <p>© 2024 כל הזכויות שמורות | נבנה באמצעות AI</p>
+    </footer>
+
+    <div id="registration-popup" class="popup">
+        <div class="popup-content">
+            <h2>הרשמה לוובינר</h2>
+            <form id="registration-form">
+                <label for="first-name">שם פרטי</label>
+                <input type="text" id="first-name" name="first-name" required class="form-input">
+                
+                <label for="last-name">שם משפחה</label>
+                <input type="text" id="last-name" name="last-name" required class="form-input">
+                
+                <label for="phone">מספר טלפון</label>
+                <input type="tel" id="phone" name="phone" required class="form-input">
+                
+                <label for="email">כתובת אימייל</label>
+                <input type="email" id="email" name="email" required class="form-input">
+                
+                <button type="button" class="cta-button" id="bit-payment">שלמו והירשמו עם Bit</button>
+                <button type="button" class="cta-button" id="paybox-payment">שלמו והירשמו עם PayBox</button>
+            </form>
+            <button id="close-popup" class="cta-button">סגור</button>
+        </div>
+    </div>
+
+    <script>
+                // Countdown Timer
+                const countdownDate = new Date("August 21, 2024 20:00:00").getTime();
+        const countdownElement = document.getElementById("countdown");
+
+        const countdownTimer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `${days} ימים ${hours} שעות ${minutes} דקות ${seconds} שניות`;
+
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                countdownElement.innerHTML = "הוובינר התחיל!";
+            }
+        }, 1000);
+
+        // Registration Popup
+        const registerButtons = document.querySelectorAll('a[href="#register"]');
+        const popup = document.getElementById('registration-popup');
+        const closePopup = document.getElementById('close-popup');
+
+        registerButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                popup.style.display = 'flex';
+            });
+        });
+
+        closePopup.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        // Close popup when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+
+        async function addToSendGridList(email, firstName, lastName, phoneNumber) {
+            try {
+                const response = await fetch('/api/add-to-sendgrid', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, firstName, lastName, phoneNumber })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to add contact to SendGrid list');
+                }
+
+                return await response.json();
+            } catch (error) {
+                console.error('Error:', error);
+                throw error;
+            }
+        }
+
+        // Function to open payment link
+        function openPaymentLink(url) {
+            window.open(url, '_blank');
+        }
+
+        document.getElementById('bit-payment').addEventListener('click', async (e) => {
+            const form = document.getElementById('registration-form');
+            const email = form['email'].value;
+            const firstName = form['first-name'].value;
+            const lastName = form['last-name'].value;
+            const phone = form['phone'].value;
+
+            try {
+                await addToSendGridList(email, firstName, lastName, phone);
+                openPaymentLink('https://www.bitpay.co.il/app/share-info?i=170770424842_19hUeiRH');
+                alert('נרשמת בהצלחה! כעת תועבר לתשלום ב-Bit.');
+            } catch (error) {
+                alert('הרשמה נכשלה, נסה שוב.');
+            }
+        });
+
+        document.getElementById('paybox-payment').addEventListener('click', async (e) => {
+            const form = document.getElementById('registration-form');
+            const email = form['email'].value;
+            const firstName = form['first-name'].value;
+            const lastName = form['last-name'].value;
+            const phone = form['phone'].value;
+
+            try {
+                await addToSendGridList(email, firstName, lastName, phone);
+                openPaymentLink('https://payboxapp.page.link/EA8Nx6MFLZJyX1mTA');
+                alert('נרשמת בהצלחה! כעת תועבר לתשלום ב-PayBox.');
+            } catch (error) {
+                alert('הרשמה נכשלה, נסה שוב.');
+            }
+        });
+
+// FAQ Accordion
+const acc = document.getElementsByClassName("accordion");
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+
+    </script>
+</body>
+</html>
