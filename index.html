@@ -7,324 +7,327 @@
     <meta name="description" content="הצטרפו לוובינר מרתק על בינה מלאכותית עם מומחי AI שרון איפראימוב ועמיר גז. למדו על ChatGPT, DALL·E, ועוד כלים מתקדמים.">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-:root {
-    --primary-color: #eabd29;
-    --secondary-color: #444444;
-    --text-color: #333;
-    --bg-color: #f8f8f8;
-}
+        :root {
+            --primary-color: #eabd29;
+            --secondary-color: #444444;
+            --text-color: #333;
+            --bg-color: #f8f8f8;
+        }
 
-body {
-    font-family: 'Heebo', sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-}
+        body {
+            font-family: 'Heebo', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-header {
-    background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-color) 100%);
-    color: var(--primary-color);
-    padding: 50px 20px;
-    text-align: center;
-    position: relative;
-}
+        header {
+            background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-color) 100%);
+            color: var(--primary-color);
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+        }
 
-.logo {
-    width: 250px;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
+        .logo {
+            width: 250px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
 
-h1, h2, h3 {
-    margin-top: 0;
-    color: var(--primary-color);
-}
+        h1, h2, h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
 
-h1 {
-    font-size: 2.5rem;
-}
+        h1 {
+            font-size: 2.5rem;
+        }
 
-h2 {
-    font-size: 2rem;
-}
+        h2 {
+            font-size: 2rem;
+        }
 
-h3 {
-    font-size: 1.5rem;
-}
+        h3 {
+            font-size: 1.5rem;
+        }
 
-.cta-button {
-    background: var(--primary-color);
-    color: #000;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    display: inline-block;
-    margin: 20px 0;
-    text-decoration: none;
-    max-width: 100%;
-    text-align: center;
-}
+        .cta-button {
+            background: var(--primary-color);
+            color: #000;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            display: inline-block;
+            margin: 20px 0;
+            text-decoration: none;
+            max-width: 100%;
+            text-align: center;
+        }
 
-.cta-button:hover, .cta-button:focus {
-    background: #ede2c0;
-    transform: translateY(-3px);
-}
+        .cta-button:hover, .cta-button:focus {
+            background: #ede2c0;
+            transform: translateY(-3px);
+        }
 
-.card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
-    padding: 30px;
-    transition: transform 0.3s;
-}
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            padding: 30px;
+            transition: transform 0.3s;
+        }
 
-.card:hover {
-    transform: translateY(-10px);
-}
+        .card:hover {
+            transform: translateY(-10px);
+        }
 
-.icon-list {
-    list-style: none;
-    padding: 0;
-}
+        .icon-list {
+            list-style: none;
+            padding: 0;
+        }
 
-.icon-list li {
-    margin: 15px 0;
-    display: flex;
-    align-items: flex-start;
-}
+        .icon-list li {
+            margin: 15px 0;
+            display: flex;
+            align-items: flex-start;
+        }
 
-.icon-list li::before {
-    content: '🔹';
-    margin-left: 10px;
-    font-size: 1.2rem;
-    flex-shrink: 0;
-}
+        .icon-list li::before {
+            content: '🔹';
+            margin-left: 10px;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
 
-.reviews, .faq {
-    background: var(--secondary-color);
-    color: #fff;
-    padding: 50px 20px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-}
+        .reviews, .faq {
+            background: var(--secondary-color);
+            color: #fff;
+            padding: 50px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
 
-.review {
-    background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
+        .review {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
 
-.review span {
-    color: var(--primary-color);
-    font-weight: bold;
-}
+        .review span {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
 
-footer {
-    background: #2a2a2a;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-}
+        footer {
+            background: #2a2a2a;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
 
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
 
-.popup-content {
-    background: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        .popup-content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.popup button {
-    display: block;
-    margin: 10px auto;
-    background: #eabd29;
-    color: #000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background 0.3s;
-    width: 80%;
-}
+        .popup button {
+            display: block;
+            margin: 10px auto;
+            background: #eabd29;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 80%;
+        }
 
-.popup button:hover {
-    background: #ede2c0;
-}
+        .popup button:hover {
+            background: #ede2c0;
+        }
 
-.form-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
 
-#countdown {
-    font-size: 2rem;
-    font-weight: light;
-    margin: 20px 0;
-    color: var(--primary-color);
-}
+        #countdown {
+            font-size: 2rem;
+            font-weight: light;
+            margin: 20px 0;
+            color: var(--primary-color);
+        }
 
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: right;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-}
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: right;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
 
-.active, .accordion:hover {
-    background-color: #7c7c7c;
-}
+        .active, .accordion:hover {
+            background-color: #7c7c7c;
+        }
 
-.panel {
-    padding: 0 18px;
-    background-color: rgb(188, 188, 188);
-    display: none;
-    overflow: hidden;
-}
+        .panel {
+            padding: 0 18px;
+            background-color: rgb(188, 188, 188);
+            display: none;
+            overflow: hidden;
+        }
 
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-    .container {
-        width: 95%;
-        padding: 15px;
-    }
-    header {
-        padding: 30px 15px;
-    }
-    h1 {
-        font-size: 2.2rem;
-    }
-    h2 {
-        font-size: 1.8rem;
-    }
-    h3 {
-        font-size: 1.4rem;
-    }
-    .cta-button {
-        max-width: 80%;
-        padding: 12px 20px;
-        font-size: 1.1rem;
-    }
-    .card {
-        padding: 25px;
-    }
-    #countdown {
-        font-size: 1.8rem;
-    }
-    .popup-content {
-        padding: 30px;
-        max-height: 80vh;
-        overflow-y: auto;
-    }
-    .form-input {
-        font-size: 16px;
-    }
-}
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+            header {
+                padding: 30px 15px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            h3 {
+                font-size: 1.4rem;
+            }
+            .cta-button {
+                max-width: 80%;
+                padding: 12px 20px;
+                font-size: 1.1rem;
+            }
+            .card {
+                padding: 25px;
+            }
+            #countdown {
+                font-size: 1.8rem;
+            }
+            .popup-content {
+                padding: 30px;
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            .form-input {
+                font-size: 16px;
+            }
+        }
 
-@media (max-width: 480px) {
-    body {
-        font-size: 16px;
-    }
-    h1 {
-        font-size: 2rem;
-    }
-    h2 {
-        font-size: 1.6rem;
-    }
-    h3 {
-        font-size: 1.3rem;
-    }
-    .cta-button {
-        max-width: 100%;
-        padding: 10px 15px;
-        font-size: 1rem;
-    }
-    #countdown {
-        font-size: 1.5rem;
-    }
-    .popup-content {
-        padding: 20px;
-    }
-    .card {
-        padding: 20px;
-    }
-}
+        @media (max-width: 480px) {
+            body {
+                font-size: 16px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            h3 {
+                font-size: 1.3rem;
+            }
+            .cta-button {
+                max-width: 100%;
+                padding: 10px 15px;
+                font-size: 1rem;
+            }
+            #countdown {
+                font-size: 1.5rem;
+            }
+            .popup-content {
+                padding: 20px;
+            }
+            .card {
+                padding: 20px;
+            }
+        }
 
-@media (max-width: 320px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-    h2 {
-        font-size: 1.4rem;
-    }
-    h3 {
-        font-size: 1.2rem;
-    }
-    .cta-button {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-    #countdown {
-        font-size: 1.3rem;
-    }
-    .popup-content {
-        padding: 15px;
-    }
-    .card {
-        padding: 15px;
-    }
-}    </style>
+        @media (max-width: 320px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+            h3 {
+                font-size: 1.2rem;
+            }
+            .cta-button {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+            #countdown {
+                font-size: 1.3rem;
+            }
+            .popup-content {
+                padding: 15px;
+            }
+            .card {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="https://res.cloudinary.com/dsoh3yteb/image/upload/v1723147059/logo11_nxjk2u.png" alt="לוגו" class="logo">
-        <h1>AI לקראת החגים</h1>
-        <h2>וובינר מרתק עם מומחי AI עידו שגב וכוכבית ארנון</h2>
-        <a href="#register" class="cta-button" aria-label="הרשמה לוובינר">הצטרפו עכשיו</a>
-        <h2>22.9.24 שעה 20:00</h2>
-        <div id="countdown" aria-label="ספירה לאחור לתחילת הוובינר"></div>
+    <header class="hero">
+        <div class="hero-content">
+            <img src="https://res.cloudinary.com/dsoh3yteb/image/upload/v1723147059/logo11_nxjk2u.png" alt="לוגו" class="logo">
+            <h1>AI לקראת החגים</h1>
+            <h2>וובינר מרתק עם מומחי AI עידו שגב וכוכבית ארנון</h2>
+            <a href="#register" class="cta-button" aria-label="הרשמה לוובינר">הצטרפו עכשיו</a>
+            <h2>22.9.24 שעה 20:00</h2>
+            <div id="countdown" aria-label="ספירה לאחור לתחילת הוובינר"></div>
+        </div>
     </header>
 
     <main class="container">
@@ -356,7 +359,7 @@ footer {
                 <li>שלוט ב-ChatGPT ליצירת תוכן ופתרון בעיות - כולל דוגמאות לשימוש במערכת לכתיבת מאמרים, יצירת סיכומים, ושיפור התקשורת עם לקוחות.</li>
                 <li>שחררו את הפוטנציאל של Claude לניתוח טקסט מתקדם - איך להשתמש ב-Claude לניתוח טקסטים מורכבים והפקת תובנות, כולל דוגמאות מעשיות.</li>
                 <li>יצירת תמונות מדהימות עם DALL·E ו-Ideogram - מדריך מעשי ליצירת תמונות ואיורים מותאמים אישית לכל צורך, כולל יצירת חומרי שיווק מרשימים.</li>
-                <li>שדרגו את המצגות שלכם עם gamma.app - איך ליצור מצגות מרהיבות וחדשניות בקלות, כולל טיפים לשיפור האפקטיביות והמקצועיות של המצגות שלך.</li>
+<li>שדרגו את המצגות שלכם עם gamma.app - איך ליצור מצגות מרהיבות וחדשניות בקלות, כולל טיפים לשיפור האפקטיביות והמקצועיות של המצגות שלך.</li>
                 <li>שימוש בכלי AI לשיפור האפקטיביות העסקית - כולל דוגמאות ליישום כלים כמו GPT-4 ו-Claude בתהליכי קבלת החלטות ובניתוח נתונים.</li>
                 <li>הבנת העקרונות המנחים של AI ואתיקה - איך להשתמש בבינה מלאכותית באופן אחראי ומוסרי, כולל ניהול סיכונים והבטחת פרטיות.</li>
                 <li>כלים ותוכנות מובילות בשוק - הכרות עם הכלים והתוכנות המובילות בתחום הבינה המלאכותית, והבנת היתרונות והחסרונות של כל כלי.</li>
@@ -544,4 +547,3 @@ footer {
     </script>
 </body>
 </html>
-                
