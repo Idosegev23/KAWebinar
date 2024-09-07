@@ -3,330 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>גלה את עולם הבינה המלאכותית</title>
-    <meta name="description" content="הצטרפו לוובינר מרתק על בינה מלאכותית עם מומחי AI שרון איפראימוב ועמיר גז. למדו על ChatGPT, DALL·E, ועוד כלים מתקדמים.">
+    <title>AI לקראת החגים</title>
+    <meta name="description" content="הצטרפו לוובינר מרתק על בינה מלאכותית עם מומחי AI עידו שגב וכוכבית ארנון. למדו על ChatGPT, DALL·E, ועוד כלים מתקדמים.">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-:root {
-    --primary-color: #eabd29;
-    --secondary-color: #444444;
-    --text-color: #333;
-    --bg-color: #f8f8f8;
-}
-
-body {
-    font-family: 'Heebo', sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-color) 100%);
-    color: var(--primary-color);
-    padding: 50px 20px;
-    text-align: center;
-    position: relative;
-}
-
-.logo {
-    width: 250px;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-h1, h2, h3 {
-    margin-top: 0;
-    color: var(--primary-color);
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-.cta-button {
-    background: var(--primary-color);
-    color: #000;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    display: inline-block;
-    margin: 20px 0;
-    text-decoration: none;
-    max-width: 100%;
-    text-align: center;
-}
-
-.cta-button:hover, .cta-button:focus {
-    background: #ede2c0;
-    transform: translateY(-3px);
-}
-
-.card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
-    padding: 30px;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.icon-list {
-    list-style: none;
-    padding: 0;
-}
-
-.icon-list li {
-    margin: 15px 0;
-    display: flex;
-    align-items: flex-start;
-}
-
-.icon-list li::before {
-    content: '🔹';
-    margin-left: 10px;
-    font-size: 1.2rem;
-    flex-shrink: 0;
-}
-
-.reviews, .faq {
-    background: var(--secondary-color);
-    color: #fff;
-    padding: 50px 20px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-}
-
-.review {
-    background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.review span {
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-footer {
-    background: #2a2a2a;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.popup-content {
-    background: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.popup button {
-    display: block;
-    margin: 10px auto;
-    background: #eabd29;
-    color: #000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background 0.3s;
-    width: 80%;
-}
-
-.popup button:hover {
-    background: #ede2c0;
-}
-
-.form-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-#countdown {
-    font-size: 2rem;
-    font-weight: light;
-    margin: 20px 0;
-    color: var(--primary-color);
-}
-
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: right;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-}
-
-.active, .accordion:hover {
-    background-color: #7c7c7c;
-}
-
-.panel {
-    padding: 0 18px;
-    background-color: rgb(188, 188, 188);
-    display: none;
-    overflow: hidden;
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-    .container {
-        width: 95%;
-        padding: 15px;
-    }
-    header {
-        padding: 30px 15px;
-    }
-    h1 {
-        font-size: 2.2rem;
-    }
-    h2 {
-        font-size: 1.8rem;
-    }
-    h3 {
-        font-size: 1.4rem;
-    }
-    .cta-button {
-        max-width: 80%;
-        padding: 12px 20px;
-        font-size: 1.1rem;
-    }
-    .card {
-        padding: 25px;
-    }
-    #countdown {
-        font-size: 1.8rem;
-    }
-    .popup-content {
-        padding: 30px;
-        max-height: 80vh;
-        overflow-y: auto;
-    }
-    .form-input {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 16px;
-    }
-    h1 {
-        font-size: 2rem;
-    }
-    h2 {
-        font-size: 1.6rem;
-    }
-    h3 {
-        font-size: 1.3rem;
-    }
-    .cta-button {
-        max-width: 100%;
-        padding: 10px 15px;
-        font-size: 1rem;
-    }
-    #countdown {
-        font-size: 1.5rem;
-    }
-    .popup-content {
-        padding: 20px;
-    }
-    .card {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 320px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-    h2 {
-        font-size: 1.4rem;
-    }
-    h3 {
-        font-size: 1.2rem;
-    }
-    .cta-button {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-    #countdown {
-        font-size: 1.3rem;
-    }
-    .popup-content {
-        padding: 15px;
-    }
-    .card {
-        padding: 15px;
-    }
-}    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="https://kaitools.netlify.app/static/media/logo11.84e8ea8b48e8a76ad9ef.png" alt="לוגו" class="logo">
-        <h1>הכרת עולם הבינה המלאכותית עם KA</h1>
-        <h2>וובינר מרתק עם מומחי AI שרון איפראימוב ועמיר גז</h2>
+        <img src="https://res.cloudinary.com/dsoh3yteb/image/upload/v1723147059/logo11_nxjk2u.png" alt="לוגו" class="logo">
+        <h1>AI לקראת החגים</h1>
+        <h2>וובינר מרתק עם מומחי AI עידו שגב וכוכבית ארנון</h2>
         <a href="#register" class="cta-button" aria-label="הרשמה לוובינר">הצטרפו עכשיו</a>
+        <h2>22.9.24 שעה 20:00</h2>
         <div id="countdown" aria-label="ספירה לאחור לתחילת הוובינר"></div>
     </header>
 
-  <main class="container">
+    <main class="container">
         <section class="card" aria-labelledby="about-company">
             <h2 id="about-company">על החברה שלנו</h2>
             <p><strong>KA: הכוח של ידע ושאפתנות</strong></p>
@@ -340,12 +32,12 @@ footer {
         <section class="card" aria-labelledby="instructors">
             <h2 id="instructors">המדריכים שלנו</h2>
             <div>
-                <h3>שרון איפראימוב</h3>
-                <p>מומחה לבינה מלאכותית עם ניסיון עשיר בתחום. שרון מתמחה בפיתוח והטמעת מערכות AI בארגונים. ידוע ביכולת להפוך את המורכב לפשוט וברור ולהדריך בצורה מרתקת ומעשירה.</p>
+                <h3>כוכבית ארנון</h3>
+                <p>כוכבית ארנון היא מייסדת ומנכ"לית KA, בעלת ניסיון של כמעט שני עשורים בתחום חווית לקוח, בינה מלאכותית, וניהול בכיר בארגונים.</p>
             </div>
             <div>
-                <h3>עמיר גז</h3>
-                <p>עמיר גז, בן 40 מהרצליה ואבא לשתי בנות, עם ניסיון של 20 שנה בהיי-טק. מומחה בפיתוח אתרים ואפליקציות בענן, ניהול תשתיות ענן ו-DevOps ב-AWS, והובלת צוותי פיתוח.</p>
+                <h3>עידו שגב</h3>
+                <p>עידו שגב, מנכ"ל חטיבת ה-AI ב-KA ובחברת Triroars. בעל ניסיון עשיר בניהול ופיתוח מערכות AI בארגונים, מומחה באוטומציה ומוביל בתחום הבינה המלאכותית בישראל.</p>
             </div>
         </section>
 
@@ -372,7 +64,7 @@ footer {
                 <li>קבלו השראה לרעיונות חדשניים - דוגמאות לפרויקטים יצירתיים שיכולים לשנות את הדרך בה אתם עובדים.</li>
                 <li>רשת קשרים והזדמנויות חדשות - תפגשו אנשים נוספים המתעניינים בבינה מלאכותית.</li>
                 <li>כלים מעשיים ויישומיים - קבלו גישה לכלים ולמשאבים מעשיים שיסייעו לכם ליישם את מה שלמדתם.</li>
-<li>טכנולוגיה ותעשייה - הכרות עם החידושים והטרנדים העדכניים ביותר בתחום הבינה המלאכותית.</li>
+                <li>טכנולוגיה ותעשייה - הכרות עם החידושים והטרנדים העדכניים ביותר בתחום הבינה המלאכותית.</li>
             </ul>
         </section>
 
@@ -393,7 +85,7 @@ footer {
             <h2 id="faq-section">שאלות נפוצות</h2>
             <button class="accordion">מה עלות ההשתתפות בוובינר?</button>
             <div class="panel">
-                <p>עלות ההשתתפות בוובינר היא 100 ₪ בלבד. ניתן לשלם באמצעות  BIT או PAYBOX</p>
+                <p>עלות ההשתתפות בוובינר היא 100 ₪ בלבד. ניתן לשלם באמצעות כרטיס אשראי, Bit, Google Pay או Apple Pay.</p>
             </div>
 
             <button class="accordion">איך ניתן להירשם?</button>
@@ -408,7 +100,7 @@ footer {
 
             <button class="accordion">מי הם המדריכים?</button>
             <div class="panel">
-                <p>המדריכים שלנו הם שרון איפראימוב ועמיר גז, מומחים בעלי ניסיון עשיר בעולמות הבינה המלאכותית והטכנולוגיה.</p>
+                <p>המדריכים שלנו הם עידו שגב וכוכבית ארנון, מומחים בעלי ניסיון עשיר בעולמות הבינה המלאכותית והטכנולוגיה.</p>
             </div>
 
             <button class="accordion">מה משך הוובינר?</button>
@@ -418,7 +110,7 @@ footer {
         </section>
 
         <a href="#register" class="cta-button" aria-label="הרשמה לוובינר">הירשמו עכשיו לוובינר</a>
-       </main>
+    </main>
 
     <footer>
         <p>© 2024 כל הזכויות שמורות | נבנה באמצעות AI</p>
@@ -440,16 +132,15 @@ footer {
                 <label for="email">כתובת אימייל</label>
                 <input type="email" id="email" name="email" required class="form-input">
                 
-                <button type="button" class="cta-button" id="bit-payment">שלמו והירשמו עם Bit</button>
-                <button type="button" class="cta-button" id="paybox-payment">שלמו והירשמו עם PayBox</button>
+                <button type="button" class="cta-button" id="payment-button">הירשמו ושלמו עכשיו</button>
             </form>
             <button id="close-popup" class="cta-button">סגור</button>
         </div>
     </div>
 
     <script>
-                // Countdown Timer
-                const countdownDate = new Date("August 21, 2024 20:00:00").getTime();
+        // Countdown Timer
+        const countdownDate = new Date("September 22, 2024 20:00:00").getTime();
         const countdownElement = document.getElementById("countdown");
 
         const countdownTimer = setInterval(function() {
@@ -513,12 +204,7 @@ footer {
             }
         }
 
-        // Function to open payment link
-        function openPaymentLink(url) {
-            window.open(url, '_blank');
-        }
-
-        document.getElementById('bit-payment').addEventListener('click', async (e) => {
+        document.getElementById('payment-button').addEventListener('click', async (e) => {
             const form = document.getElementById('registration-form');
             const email = form['email'].value;
             const firstName = form['first-name'].value;
@@ -527,43 +213,26 @@ footer {
 
             try {
                 await addToSendGridList(email, firstName, lastName, phone);
-                openPaymentLink('https://www.bitpay.co.il/app/share-info?i=170770424842_19hUeiRH');
-                alert('נרשמת בהצלחה! כעת תועבר לתשלום ב-Bit.');
+                window.location.href = 'https://mrng.to/0bey8DT1nu';
+                alert('נרשמת בהצלחה! כעת תועבר לדף התשלום.');
             } catch (error) {
                 alert('הרשמה נכשלה, נסה שוב.');
             }
         });
 
-        document.getElementById('paybox-payment').addEventListener('click', async (e) => {
-            const form = document.getElementById('registration-form');
-            const email = form['email'].value;
-            const firstName = form['first-name'].value;
-            const lastName = form['last-name'].value;
-            const phone = form['phone'].value;
-
-            try {
-                await addToSendGridList(email, firstName, lastName, phone);
-                openPaymentLink('https://payboxapp.page.link/EA8Nx6MFLZJyX1mTA');
-                alert('נרשמת בהצלחה! כעת תועבר לתשלום ב-PayBox.');
-            } catch (error) {
-                alert('הרשמה נכשלה, נסה שוב.');
-            }
-        });
-
-// FAQ Accordion
-const acc = document.getElementsByClassName("accordion");
-for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
+        // FAQ Accordion
+        const acc = document.getElementsByClassName("accordion");
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
         }
-    });
-}
-
     </script>
 </body>
 </html>
