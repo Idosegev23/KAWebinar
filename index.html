@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>גלה את עולם הבינה המלאכותית</title>
-    <meta name="description" content="הצטרפו לוובינר מרתק על בינה מלאכותית עם מומחי AI שרון איפראימוב ועמיר גז. למדו על ChatGPT, DALL·E, ועוד כלים מתקדמים.">
+    <meta name="description" content="הצטרפו לוובינר מרתק על בינה מלאכותית עם מומחי AI עידו שגב וכוכבית ארנון. למדו על ChatGPT, DALL·E, ועוד כלים מתקדמים.">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -31,12 +31,29 @@
             padding: 20px;
         }
 
-        header {
-            background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-color) 100%);
-            color: var(--primary-color);
-            padding: 50px 20px;
+        .hero {
+            background-image: url('https://res.cloudinary.com/dsoh3yteb/image/upload/v1725733066/WhatsApp_Image_2024-08-04_at_17.40.17_rxkukd.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
             text-align: center;
+            padding: 100px 20px;
             position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .logo {
@@ -49,6 +66,10 @@
         h1, h2, h3 {
             margin-top: 0;
             color: var(--primary-color);
+        }
+
+        .hero h1, .hero h2 {
+            color: #fff;
         }
 
         h1 {
@@ -95,6 +116,25 @@
 
         .card:hover {
             transform: translateY(-10px);
+        }
+
+        .instructor-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .instructors-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .instructor {
+            text-align: center;
+            margin: 20px;
         }
 
         .icon-list {
@@ -196,7 +236,7 @@
             font-size: 2rem;
             font-weight: light;
             margin: 20px 0;
-            color: var(--primary-color);
+            color: #fff;
         }
 
         .accordion {
@@ -230,8 +270,8 @@
                 width: 95%;
                 padding: 15px;
             }
-            header {
-                padding: 30px 15px;
+            .hero {
+                padding: 50px 15px;
             }
             h1 {
                 font-size: 2.2rem;
@@ -290,6 +330,10 @@
             .card {
                 padding: 20px;
             }
+            .instructor-img {
+                width: 150px;
+                height: 150px;
+            }
         }
 
         @media (max-width: 320px) {
@@ -314,6 +358,10 @@
             }
             .card {
                 padding: 15px;
+            }
+            .instructor-img {
+                width: 120px;
+                height: 120px;
             }
         }
     </style>
@@ -343,13 +391,17 @@
         
         <section class="card" aria-labelledby="instructors">
             <h2 id="instructors">המדריכים שלנו</h2>
-            <div>
-                <h3>כוכבית ארנון</h3>
-                <p>כוכבית ארנון היא מייסדת ומנכ"לית KA, בעלת ניסיון של כמעט שני עשורים בתחום חווית לקוח, בינה מלאכותית, וניהול בכיר בארגונים.</p>
-            </div>
-            <div>
-                <h3>עידו שגב</h3>
-                <p>עידו שגב, מנכ"ל חטיבת ה-AI ב-KA ובחברת Triroars. בעל ניסיון עשיר בניהול ופיתוח מערכות AI בארגונים, מומחה באוטומציה ומוביל בתחום הבינה המלאכותית בישראל.</p>
+            <div class="instructors-container">
+                <div class="instructor">
+                    <img src="https://res.cloudinary.com/dsoh3yteb/image/upload/v1725735896/kochavith_xrfyrg.png" alt="כוכבית ארנון" class="instructor-img">
+                    <h3>כוכבית ארנון</h3>
+                    <p>כוכבית ארנון היא מייסדת ומנכ"לית KA, בעלת ניסיון של כמעט שני עשורים בתחום חווית לקוח, בינה מלאכותית, וניהול בכיר בארגונים.</p>
+                </div>
+                <div class="instructor">
+<img src="https://res.cloudinary.com/dsoh3yteb/image/upload/v1723584492/Untitled-1_nckpgq.psd" alt="עידו שגב" class="instructor-img">
+                    <h3>עידו שגב</h3>
+                    <p>עידו שגב, מנכ"ל חטיבת ה-AI ב-KA ובחברת Triroars. בעל ניסיון עשיר בניהול ופיתוח מערכות AI בארגונים, מומחה באוטומציה ומוביל בתחום הבינה המלאכותית בישראל.</p>
+                </div>
             </div>
         </section>
 
@@ -359,7 +411,7 @@
                 <li>שלוט ב-ChatGPT ליצירת תוכן ופתרון בעיות - כולל דוגמאות לשימוש במערכת לכתיבת מאמרים, יצירת סיכומים, ושיפור התקשורת עם לקוחות.</li>
                 <li>שחררו את הפוטנציאל של Claude לניתוח טקסט מתקדם - איך להשתמש ב-Claude לניתוח טקסטים מורכבים והפקת תובנות, כולל דוגמאות מעשיות.</li>
                 <li>יצירת תמונות מדהימות עם DALL·E ו-Ideogram - מדריך מעשי ליצירת תמונות ואיורים מותאמים אישית לכל צורך, כולל יצירת חומרי שיווק מרשימים.</li>
-<li>שדרגו את המצגות שלכם עם gamma.app - איך ליצור מצגות מרהיבות וחדשניות בקלות, כולל טיפים לשיפור האפקטיביות והמקצועיות של המצגות שלך.</li>
+                <li>שדרגו את המצגות שלכם עם gamma.app - איך ליצור מצגות מרהיבות וחדשניות בקלות, כולל טיפים לשיפור האפקטיביות והמקצועיות של המצגות שלך.</li>
                 <li>שימוש בכלי AI לשיפור האפקטיביות העסקית - כולל דוגמאות ליישום כלים כמו GPT-4 ו-Claude בתהליכי קבלת החלטות ובניתוח נתונים.</li>
                 <li>הבנת העקרונות המנחים של AI ואתיקה - איך להשתמש בבינה מלאכותית באופן אחראי ומוסרי, כולל ניהול סיכונים והבטחת פרטיות.</li>
                 <li>כלים ותוכנות מובילות בשוק - הכרות עם הכלים והתוכנות המובילות בתחום הבינה המלאכותית, והבנת היתרונות והחסרונות של כל כלי.</li>
